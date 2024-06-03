@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'temurin'
 
       - name: Build with Maven
         run: mvn clean install
@@ -30,7 +31,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
           project_id: 110273171284049073490
-          service_account_key: 110273171284049073490
+          service_account_key: ${{ secrets.GCP_KEY }}
 
       - name: Deploy to GCP App Engine
         run: |
