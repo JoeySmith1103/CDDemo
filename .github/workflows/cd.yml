@@ -24,12 +24,12 @@ jobs:
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v0.4.0
         with:
-          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+          credentials_json: ${{ secrets.GCP_KEY }}
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
-          project_id: ${{ secrets.GCP_PROJECT }}
+          project_id: 110273171284049073490
           service_account_key: 110273171284049073490
 
       - name: Deploy to GCP App Engine
