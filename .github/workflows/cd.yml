@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
           project_id: ${{ secrets.GCP_PROJECT }}
-          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          service_account_key: 110273171284049073490
 
       - name: Deploy to GCP App Engine
         run: |
