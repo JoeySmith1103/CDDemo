@@ -32,7 +32,7 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
-          project_id: 110273171284049073490
+          project_id: fine-balm-425309-g1
           service_account_key: ${{ secrets.GCP_KEY }}
 
       - name: Deploy to GCP App Engine
